@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(
     cors({
         allowedHeaders: ['Content-Type'],
-        origin: ["http://localhost:3001", "http://localhost:4173"],
+        origin: ["http://localhost:3001", "http://localhost:4173", "https://verification-application.suyashshrestha.com.np/"],
         credentials: true
     })
 )

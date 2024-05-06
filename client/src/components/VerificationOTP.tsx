@@ -25,6 +25,7 @@ import {
 
 import { TResponseData } from "@/lib/types";
 import { Spinner } from "./ui/Spinner/Spinner";
+import config from "@/config";
 
 const FormSchema = z.object({
     code: z.string().min(6, {
@@ -33,6 +34,7 @@ const FormSchema = z.object({
 });
 
 export function VerificationOTP() {
+    const API_URL = config.serverUrl;
     const navigate = useNavigate();
     const [isLoading, setIsLoading] = useState(false);
     const form = useForm<z.infer<typeof FormSchema>>({
@@ -45,7 +47,7 @@ export function VerificationOTP() {
     async function onSubmit(data: z.infer<typeof FormSchema>) {
         setIsLoading(true);
         try {
-            const response = await fetch("http://localhost:3000/api/v1/verify", {
+            const response = await fetch(`${API_URL}/verify`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
