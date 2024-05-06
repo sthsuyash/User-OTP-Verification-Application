@@ -20,7 +20,7 @@ This repository contains a small application built to facilitate user verificati
 
 - **Frontend:** React with Typescript
 - **Backend:** Express.js with Typescript
-- **Testing:** Jest (for client-side tests)
+- **Testing:** Jest (for tests)
 
 ## Setup Instructions
 

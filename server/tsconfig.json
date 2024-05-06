@@ -2,7 +2,7 @@
   "exclude": [
     "./coverage",
     "./dist",
-    "src/controller/__tests__",
+    "./tests",
     "jest.config.js"
   ],
   "ts-node": {

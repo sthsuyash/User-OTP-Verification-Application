@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(
     cors({
         allowedHeaders: ['Content-Type'],
-        origin: "http://localhost:3001",
+        origin: ["http://localhost:3001", "http://localhost:4173"],
         credentials: true
     })
 )
